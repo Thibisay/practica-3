@@ -1,0 +1,11 @@
+@startuml ejercicio_l
+hide empty description
+[*] -> Procesando_pedido :Encargar Producto
+Procesando_pedido --> Esperando_pago :  Validar Pedido
+Esperando_pago --> Venta_aprobada : Cliente paga
+Venta_aprobada -> Venta_Realizada : Entregar producto 
+Venta_Realizada -> [*]
+
+Esperando_pago -> Venta_cancelada : Cliente no paga
+Venta_cancelada --> [*]
+@enduml

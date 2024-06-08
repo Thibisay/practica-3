@@ -1,0 +1,7 @@
+@startuml ejercicio_h
+object venta
+object registro
+registro ---> venta :2. Crear LineaVenta (especificacion, cantidad)
+registro ---> registro :1. Crear nueva venta, 4. Finalizar venta
+venta ----> venta : 3. Añadir linea de venta
+@enduml
